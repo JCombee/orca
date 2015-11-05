@@ -1,33 +1,14 @@
-# loopback-example-angular
+# pr-loopback-angularjs
 
-```
-$ git clone https://github.com/strongloop/loopback-example-angular.git
-$ cd loopback-example-angular
-$ npm install
-$ node . # then browse to localhost:3000
-```
+A template for developing Angular Web apps with an Loopback backend. Fully automated by grunt it helps you with all sorts of actions to help you develop in fast phase. 
 
-A simple todo list using AngularJS on the client-side and LoopBack on the
-server-side.
+## Based on
+This repository is based on the example given by the Loopback documentation: https://github.com/strongloop/loopback-example-angular
 
-## Prerequisites
+## Prerequests
 
-### Tutorials
-
-- [Getting started with LoopBack](https://github.com/strongloop/loopback-getting-started)
-- [Tutorial series, step 1](https://github.com/strongloop/loopback-example#the-basics)
-
-### Knowledge of
-
-- [Angular](https://angularjs.org/)
-- [Angular Resource](https://docs.angularjs.org/api/ngResource/service/$resource)
-- [AngularUI Router](https://github.com/angular-ui/ui-router)
-- [Bootstrap](http://getbootstrap.com/)
-- [Bower](http://bower.io/)
-- [LoopBack](http://loopback.io/)
-- [LoopBack AngularJS SDK](http://docs.strongloop.com/display/LB/AngularJS+JavaScript+SDK)
-- [LoopBack models](http://docs.strongloop.com/display/LB/Defining+models)
-- [LoopBack middleware](http://docs.strongloop.com/display/LB/Defining+middleware)
+- [Node v4.2.1](https://nodejs.org/)
+- npm v2.14.9 - npm install npm@v2.14.9
 
 ## Procedure
 
