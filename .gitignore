@@ -11,10 +11,12 @@
 *.tgz
 *.xml
 .DS_Store
+.sass-cache
 .idea
 .project
 .strong-pm
 coverage
 node_modules
 npm-debug.log
-client/vendor
+client
+docular_generated
