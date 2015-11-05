@@ -18,7 +18,7 @@
   "authors": [
     "Jerke Combee <jerke1988@gmail.com>"
   ],
-  "description": "A template for developing Angular Web apps with an Loopback backend. Fully automated by grunt it helps you with all sorts of actions to help you develop in fast phase.",
+  "description": "Orca is an organsition system. It gives you some basic tools to help your team's workflow for small, mostly repeatable, activities.",
   "main": "",
   "moduleType": [],
   "license": "MIT"

@@ -1,6 +1,6 @@
-# pr-loopback-angularjs
+# orca
 
-A template for developing Angular Web apps with an Loopback backend. Fully automated by grunt it helps you with all sorts of actions to help you develop in fast phase. 
+Orca is an organsition system. It gives you some basic tools to help your team's workflow for small, mostly repeatable, activities.
 
 ## Based on
 This repository is based on the example given by the Loopback documentation: https://github.com/strongloop/loopback-example-angular

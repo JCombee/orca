@@ -1,7 +1,7 @@
 {
   "name": "pr-loopback-angularjs",
   "version": "1.0.0",
-  "description": "loopback-example-angular",
+  "description": "Orca is an organsition system. It gives you some basic tools to help your team's workflow for small, mostly repeatable, activities.",
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint .",
