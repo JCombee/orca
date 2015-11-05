@@ -1,7 +1,7 @@
 {
-  "name": "loopback-example-angular",
+  "name": "pr-loopback-angularjs",
   "version": "0.0.0",
-  "homepage": "https://github.com/strongloop/loopback-example-angular",
+  "homepage": "https://github.com/JCombee/pr-loopback-angularjs",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,9 +16,9 @@
     "angular-material": "master"
   },
   "authors": [
-    "Administrator <admin@local.host>"
+    "Jerke Combee <jerke1988@gmail.com>"
   ],
-  "description": "",
+  "description": "A template for developing Angular Web apps with an Loopback backend. Fully automated by grunt it helps you with all sorts of actions to help you develop in fast phase.",
   "main": "",
   "moduleType": [],
   "license": "MIT"
