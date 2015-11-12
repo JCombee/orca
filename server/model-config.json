@@ -8,7 +8,11 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": false
+    }
   },
   "AccessToken": {
     "dataSource": "db",
@@ -25,9 +29,5 @@
   "Role": {
     "dataSource": "db",
     "public": false
-  },
-  "Todo": {
-    "dataSource": "db",
-    "public": true
   }
 }

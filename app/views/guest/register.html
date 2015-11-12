@@ -1,0 +1,36 @@
+<section class="md-whiteframe-z1">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <div class="orca-toolbar-icon">
+        <md-icon md-svg-src="vendor/material-design-icons/social/svg/design/ic_person_18px.svg" class="md-block"></md-icon>
+      </div>
+      <h1>Login</h1>
+    </div>
+  </md-toolbar>
+
+  <md-content layout-padding class="autoScroll">
+    <form name="userRegistration" ng-controller="AuthController">
+      <md-input-container class="md-icon-float md-block">
+        <label>Username</label>
+        <md-icon md-svg-src="vendor/material-design-icons/social/svg/design/ic_person_24px.svg"></md-icon>
+        <input ng-model="user.email" required name="userName" type="text" md-maxlength="30">
+        <div ng-messages="userRegistration.userName.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block">
+        <label>Password</label>
+        <md-icon md-svg-src="vendor/material-design-icons/action/svg/design/ic_lock_24px.svg"></md-icon>
+        <input ng-model="user.password" type="password">
+      </md-input-container>
+      <md-button class="md-raised md-primary" ng-click="register(user)">Register</md-button>
+    </form>
+  </md-content>
+
+</section>
+
+<div class="orca-text-center">
+  <div class="md-caption" layout-margin><a ui-sref="guest.register">Register a account</a></div>
+  <div class="md-caption" layout-margin><a ui-sref="guest.retrive">Retrive lost username/password</a></div>
+</div>

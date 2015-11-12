@@ -6,7 +6,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-wiredep');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-concurrent');
 	grunt.loadNpmTasks('grunt-nodemon');
 	grunt.loadNpmTasks('grunt-loopback-sdk-angular');
@@ -109,16 +108,18 @@ module.exports = function (grunt) {
 		},
 		
 		watch: {
+			
 			options: {
 				livereload: true
 			},
+			
 			sass: {
 				files: ['app/scss/**/*.*'],
 				tasks: ['sass', 'includeSource', 'wiredep']
 			},
 			
 			html: {
-				files: ['app/**/*.html', 'app/**/*.js'],
+				files: ['app/**/*.html', 'app/**/**/*.html', 'app/*.html', 'app/**/*.js'],
 				tasks: ['copy', 'includeSource', 'wiredep']
 			},
 			
@@ -127,8 +128,8 @@ module.exports = function (grunt) {
 				tasks: ['loopback_sdk_angular', 'docular']
 			},
 			
-			grunt: {
-				files: ['Gruntfile.js'],
+			configFiles: {
+				files: [ 'Gruntfile.js', 'config/*.js' ],
 				options: {
 					reload: true
 				}
@@ -141,7 +142,7 @@ module.exports = function (grunt) {
 				logConcurrentOutput: true
 			}
 		}
-	
+		
 	});
 	
 	grunt.registerTask('default', ['clean', 'loopback_sdk_angular', 'docular', 'copy', 'sass', 'includeSource', 'wiredep', 'concurrent']);

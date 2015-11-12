@@ -1,0 +1,32 @@
+<md-sidenav md-component-id="left" md-is-open="true" md-is-locked-open="$mdMedia('gt-sm')" class="orca-sidenav md-sidenav-left md-primary" ng-class="{'orca-menu-hide': !menu.show}">
+	<md-content flex>
+		<md-list-item ng-click="go(item.sref)" ng-repeat="item in menu.items">
+			<md-icon md-svg-icon="{{item.icon}}" ng-class="{'orca-menu-selected': includes(item.sref)}"></md-icon>
+			<p> {{ item.name }} </p>
+		</md-list-item>
+	</md-content>
+</md-sidenav>
+
+<div ui-view></div>
+
+<div ng-controller="AuthController">
+	<md-fab-speed-dial ng-hide="user.fab.hidden" md-direction="left" md-open="user.fab.isOpen" class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': user.fab.hover }" ng-mouseenter="user.fab.isOpen=true" ng-mouseleave="user.fab.isOpen=false">
+		<md-fab-trigger>
+			<md-button aria-label="menu" class="md-fab md-primary" >
+				<md-icon md-svg-src="vendor/material-design-icons/social/svg/design/ic_person_24px.svg" aria-label="menu"></md-icon>
+			</md-button>
+		</md-fab-trigger>
+		<div ng-repeat="item in user.fab.items">
+			<md-fab-actions>
+				<md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini"
+							ng-click="item.click()">
+					<md-tooltip md-direction="left" md-visible="tooltipVisible"
+								md-autohide="false">
+					{{item.name}}
+					</md-tooltip>
+					<md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}" class="orca-user-fab-black"></md-icon>
+				</md-button>
+			</md-fab-actions>
+		</div>
+	</md-fab-speed-dial>
+</div>

@@ -1,6 +1,35 @@
-body {
-  padding-top:50px;
+$primary-color: #106CC8;
+
+.orca-guest-content {
+	max-width: 300px;
+	margin: 50px auto;
 }
-.glyphicon-remove:hover {
-  cursor:pointer
+
+.orca-text-center {
+	text-align: center;
 }
+
+.orca-toolbar-icon {
+	padding-right: 10px;
+}
+
+.orca-sidenav {
+	background-color: $primary-color;
+	
+	md-content {
+		background-color: transparent;
+		color: #fff;
+		
+		md-icon {
+			color: rgba(0,0,0,0.54);
+			&.orca-menu-selected {
+				color: #fff;
+			}
+		}
+	}
+}
+.orca-user-fab-black {
+	color: rgba(0,0,0,0.54) !important;
+}
+
+.ng-scope { height: 100%; }
