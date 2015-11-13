@@ -21,3 +21,4 @@ npm-debug.log
 client
 docular_generated
 db.json
+app/js/services/lb-services.js

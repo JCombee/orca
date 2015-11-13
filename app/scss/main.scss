@@ -15,7 +15,7 @@ $primary-color: #106CC8;
 
 .orca-sidenav {
 	background-color: $primary-color;
-	
+	height: 100% !important;
 	md-content {
 		background-color: transparent;
 		color: #fff;
@@ -32,4 +32,4 @@ $primary-color: #106CC8;
 	color: rgba(0,0,0,0.54) !important;
 }
 
-.orca-sidebar { height: 100% !important; }
+.orca-content { height: 100%; }
