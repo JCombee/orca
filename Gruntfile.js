@@ -1,15 +1,6 @@
 module.exports = function (grunt) {
 	
-	grunt.loadNpmTasks('grunt-include-source');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-wiredep');
-	grunt.loadNpmTasks('grunt-concurrent');
-	grunt.loadNpmTasks('grunt-nodemon');
-	grunt.loadNpmTasks('grunt-loopback-sdk-angular');
-	grunt.loadNpmTasks('grunt-docular');
+	require('load-grunt-tasks')(grunt);
 	
 	grunt.initConfig({
 		clean: ['client/*.*', 'client/js', 'client/css', 'client/views'],
@@ -101,6 +92,17 @@ module.exports = function (grunt) {
 			}
 		},
 		
+		jasmine: {
+			customTemplate: {
+				src: 'src/**/*.js',
+				options: {
+					specs: 'spec/*Spec.js',
+					helpers: 'spec/*Helper.js',
+					template: 'custom.tmpl'
+				}
+			}
+		},
+		
 		nodemon: {
 			dev: {
 				script: '.'
@@ -120,7 +122,7 @@ module.exports = function (grunt) {
 			
 			html: {
 				files: ['app/**/*.html', 'app/**/**/*.html', 'app/*.html', 'app/**/*.js'],
-				tasks: ['copy', 'includeSource', 'wiredep']
+				tasks: ['copy', 'includeSource', 'wiredep', 'jasmine']
 			},
 			
 			backend: {
@@ -145,7 +147,7 @@ module.exports = function (grunt) {
 		
 	});
 	
-	grunt.registerTask('default', ['clean', 'loopback_sdk_angular', 'docular', 'copy', 'sass', 'includeSource', 'wiredep', 'concurrent']);
+	grunt.registerTask('default', ['clean', 'loopback_sdk_angular', 'docular', 'copy', 'sass', 'includeSource', 'wiredep', 'jasmine', 'concurrent']);
 	
 	grunt.loadTasks('tasks');
 };
