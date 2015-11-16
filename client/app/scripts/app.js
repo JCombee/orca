@@ -15,5 +15,8 @@ angular
     'ngMessages',
     'ngResource',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial',
+    'ui.router',
+    'satellizer'
   ]);
